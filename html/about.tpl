@@ -7,7 +7,7 @@
     <title>A Propos</title>
 </head>
 <body>
-    <h1 class="header" href="index.html">Acupuncture</h1>
+    <h1 class="header" href="index.tpl">Acupuncture</h1>
     <p class="">
         A propos...
     </p>

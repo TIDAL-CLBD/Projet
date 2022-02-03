@@ -9,7 +9,7 @@
     <title>Recherche</title>
 </head>
 <body class="wrapper">
-    <h1 class="header" href="index.html"> Acupuncture </h1>
+    <h1 class="header" href="index.tpl"> Acupuncture </h1>
     <div class="searchbar">
         <!-- Temporaire: -->
         <textarea>Recherche</textarea>
