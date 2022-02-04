@@ -11,3 +11,16 @@ window.onload = function gridcss(){
     }
     console.log("js ok");
 }
+
+function fetch_db(){
+    fetch('../php/fetch.php', {method: 'get',})
+        .then(function(res) {
+            return res.text();
+        })
+        .then(function(text){
+            document.getElementById("resultat").innerHTML=text;
+        })
+        .catch(function(error){
+            console.log('erreur fetch');
+        });
+}

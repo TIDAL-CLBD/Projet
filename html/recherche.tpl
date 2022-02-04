@@ -16,7 +16,8 @@
     </div>
     <div class="filter">
         <!-- Temporaire: -->
-        <button>Filtres</button>
+        <button onclick=fetch_db()>Filtres</button>
+        <p id="resultat"></p>
     </div>
     <div class="subwrapper">
         <!-- Temporaire: -->
