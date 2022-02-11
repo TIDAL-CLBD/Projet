@@ -25,14 +25,11 @@
     <input type="checkbox" id="Symptome_3" name="Symptome_3">
 
     </div>
-    <div class="subwrapper">
-        <!-- Temporaire: -->
-        <p class="M">Maladie 1 </p>
-        <p class="S">Symptome 1</p>
-        <p class="M">Maladie 2 </p>
-        <p class="S">Symptome 2</p>
-        <p class="M">Maladie 3 </p>
-        <p class="S">Symptome 3</p>
-    </div>
+    <table id="table">
+        <tr>
+            <th>Pathologie</th>
+            <th>Symptome</th>
+        </tr>
+    </table>
 </body>
 </html>
