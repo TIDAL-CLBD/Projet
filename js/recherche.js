@@ -15,10 +15,17 @@ window.onload = function gridcss(){
 function fetch_db(){
     fetch('../php/fetch.php', {method: 'get',})
         .then(function(res) {
-            return res.text();
+            //return res.text();
+            let text = res.text();
+            var jobj = JSON.parse(text)
+            for (const x in jobj){
+                let desc = x[3] //Desc objet
+                console.log(desc)
+            }
+
         })
         .then(function(text){
-            document.getElementById("resultat").innerHTML=text;
+
         })
         .catch(function(error){
             console.log('erreur fetch');

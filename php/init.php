@@ -8,6 +8,5 @@ function init()
     $smarty->setConfigDir('../smarty/configs/');
     $smarty->setCacheDir('../smarty/cache/');
     $smarty->debugging = false;
-    echo('init ok');
     return $smarty;
 }

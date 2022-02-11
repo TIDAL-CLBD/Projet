@@ -18,17 +18,12 @@
         <!-- Temporaire: -->
         <button onclick=fetch_db()>Filtres</button>
         <p id="resultat"></p>
-    // en cours faire un menu correct
         <button onclick="Toggle_Filtres()">Filtres</button>
-function Toggle_Filtres()
-{
-    <input type="checkbox" id="Symptome_1" name=""Symptome_1">
-    <input type="checkbox" id="Symptome_2" name=""Symptome_2">
-    <input type="checkbox" id="Symptome_3" name=""Symptome_3">
-    // if zone show alors zone pas show
-    // if zone pas show alors zone show
-}
-    // fin du en cours
+
+    <input type="checkbox" id="Symptome_1" name="Symptome_1">
+    <input type="checkbox" id="Symptome_2" name="Symptome_2">
+    <input type="checkbox" id="Symptome_3" name="Symptome_3">
+
     </div>
     <div class="subwrapper">
         <!-- Temporaire: -->
