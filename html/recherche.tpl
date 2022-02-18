@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/recherche.css">
     <script src="../js/recherche.js"></script>
+    <script src="../js/Toggle_Filtres.js"></script>
     <title>Recherche</title>
 </head>
 <body class="wrapper">
@@ -18,17 +19,17 @@
         <!-- Temporaire: -->
         <button onclick=fetch_db()>Filtres</button>
         <p id="resultat"></p>
-    // en cours faire un menu correct
         <button onclick="Toggle_Filtres()">Filtres</button>
-function Toggle_Filtres()
-{
-    <input type="checkbox" id="Symptome_1" name=""Symptome_1">
-    <input type="checkbox" id="Symptome_2" name=""Symptome_2">
-    <input type="checkbox" id="Symptome_3" name=""Symptome_3">
-    // if zone show alors zone pas show
-    // if zone pas show alors zone show
-}
-    // fin du en cours
+<div id="menuF" style="display: list-item;">
+  <input type=checkbox name="M1" id="M1" >
+  <label id="LM1" for="M1">Scales</label>
+  <input type=checkbox name="M2" id="M2" >
+  <label for="M2">Horns</label>
+  <input type=checkbox name="S1" id="S1" >
+  <label for="S1">Non</label>
+  <input type=checkbox name="S2" id="S2" >
+  <label for="S2">Oui</label>
+</div>
     </div>
     <div class="subwrapper">
         <!-- Temporaire: -->
