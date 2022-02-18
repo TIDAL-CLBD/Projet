@@ -1,10 +1,19 @@
+var Toggle_on = true;
+
 function Toggle_Filtres()
 {
-    if (MenuF.style == "display: none;") {
-        MenuF.style = "display: list-item;";
+    
+    if (Toggle_on == false) {
+        MenuF.style = "display: list-item";
+        Toggle_on = true;
     }
 
-    if (MenuF.style == "display: list-item;") {
-        MenuF.style = "display: none;";
+    else {
+        MenuF.style = "display: none";
+        Toggle_on = false;
     }
+    //MenuF.style = "display: none"
+    console.log("bouton cliqué");
+    console.log(Toggle_on);
+
 }

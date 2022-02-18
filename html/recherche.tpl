@@ -22,13 +22,13 @@
         <button onclick="Toggle_Filtres()">T_Filtres</button>
 <div id="MenuF" style="display: list-item;">
   <input type=checkbox name="M1" id="M1" >
-  <label id="LM1" for="M1">Scales</label>
+  <label for="M1">Maladie_1</label>
   <input type=checkbox name="M2" id="M2" >
-  <label for="M2">Horns</label>
+  <label for="M2">Maladie_2</label>
   <input type=checkbox name="S1" id="S1" >
-  <label for="S1">Non</label>
+  <label for="S1">Symptome_1</label>
   <input type=checkbox name="S2" id="S2" >
-  <label for="S2">Oui</label>
+  <label for="S2">Symptome_2</label>
 </div>
     </div>
     <div class="subwrapper">
