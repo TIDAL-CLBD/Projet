@@ -19,8 +19,8 @@
         <!-- Temporaire: -->
         <button onclick=fetch_db()>Filtres</button>
         <p id="resultat"></p>
-        <button onclick="Toggle_Filtres()">Filtres</button>
-<div id="menuF" style="display: list-item;">
+        <button onclick="Toggle_Filtres()">T_Filtres</button>
+<div id="MenuF" style="display: list-item;">
   <input type=checkbox name="M1" id="M1" >
   <label id="LM1" for="M1">Scales</label>
   <input type=checkbox name="M2" id="M2" >
