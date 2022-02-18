@@ -40,5 +40,11 @@
         <p class="M">Maladie 3 </p>
         <p class="S">Symptome 3</p>
     </div>
+    <table id="table">
+        <tr>
+            <th>Pathologie</th>
+            <th>Symptome</th>
+        </tr>
+    </table>
 </body>
 </html>
