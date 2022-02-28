@@ -17,7 +17,7 @@
     </div>
     <div class="filter">
         <!-- Temporaire: -->
-        <button onclick=fetch_db()>Filtres</button>
+        <button onclick=fetch_db_filtres()>Filtres</button>
         <p id="resultat"></p>
         <button onclick="Toggle_Filtres()">T_Filtres</button>
 <div id="MenuF" style="display: list-item;">
