@@ -1,6 +1,7 @@
 <?php
 $val=0;
-
+$json = file_get_contents('php://input');
+$data = json_decode($json);
 //Connexion à la bdd
 
 $user = 'pgtidal';
@@ -11,12 +12,15 @@ $dbh = new PDO($dsn,$user, $passwd);
 
 //Requête sql
 
-//$sql = "SELECT * FROM patho WHERE mer=:value;";
-$sql = "SELECT * FROM patho WHERE mer=:value;";
+$sql = "SELECT * FROM patho WHERE mer LIKE %".$data[0]."% AND [type] LIKE %".$data[1]."% AND [type] LIKE %".$data[2]."%";
 $sth = $dbh->prepare( $sql );
 
-$sth->execute( array( ':value' => 'P' ) );
- 
+/*
+$sth->execute( array( ':value1' => $data[0] ) );
+$sth->execute( array( ':value2' => $data[] ) );
+$sth->execute( array( ':value3' => 'tfpc' ) );
+*/
+
 $val = $sth->fetchAll();
 
 echo(json_encode($val));

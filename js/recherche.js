@@ -1,10 +1,22 @@
 window.onload = function init(){
-    fetch_db();
+    fetch_db(true);
 }
 
-function fetch_db(){
-    console.log("called");
-    fetch('../php/fetch.php', {method: 'get',})
+function fetch_db(onload=false){
+
+    let values = getSelection();
+    var valuesStr = JSON.stringify(values);
+
+    console.log(valuesStr);
+    fetch('../php/fetch.php', {
+            method: 'POST',
+            /*
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            },
+            body: valuesStr
+            */
+        })
         .then(function(res) {
             return res.text();
         })
@@ -18,17 +30,13 @@ function fetch_db(){
 }
 
 
-
+/*
 function fetch_db_filtres(){
-    console.log(M1.checked)
+    console.log(M1.checked);
     fetch('../php/fetch.php', {method: 'get',})
         .then(function(res) {
             if (M1.checked == true) {
-                console.log(2);
 
-                //console.log(res.text());
-                console.log(res.bodyUsed);
-                //console.log(res.text().includes(zang));
                 if (res.text().includes(zang) == true) {
                     console.log(3);
                     return res.text();
@@ -51,10 +59,24 @@ function fetch_db_filtres(){
             return 1;
         });
 }
+*/
+
+function getSelection(){
+    var values = []
+
+    var selection = document.getElementsByClassName("filter");
+    for (var i = 0; i < selection.length; i++) {
+        value = selection[i].value;
+        values.push(value);
+    }
+    console.log(values);
+    return values
+}
 
 function gridcss(jobj){
-    //document.getElementById("table").innerHTML = "";
+    document.getElementById("table").innerHTML = "";
     //Ajouter les titres dans le JS et pas dans le HTMl pour pouvoir clear à chaque fois
+    console.log(jobj);
     for (const x of jobj){
         let desc = x[3]; //Desc objet
         console.log(desc);
