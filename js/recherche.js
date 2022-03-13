@@ -16,13 +16,15 @@ function fetch_db(){
         });
 }
 
+
+
 function fetch_db_filtres(){
     console.log(M1.checked)
     fetch('../php/fetch.php', {method: 'get',})
         .then(function(res) {
             if (M1.checked == true) {
                 console.log(2);
-                
+
                 //console.log(res.text());
                 console.log(res.bodyUsed);
                 //console.log(res.text().includes(zang));
@@ -35,10 +37,10 @@ function fetch_db_filtres(){
                 }
                 console.log(res.bodyUsed);
 
-                
+
             }
             console.log(5);
-            
+
         })
         .then(function(text){
             gridcss(JSON.parse(text));
