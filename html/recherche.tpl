@@ -26,6 +26,7 @@
         <button onclick="test()">Filtres</button>
         <p id="resultat"></p>
         <button onclick="Toggle_Filtres()">Toggle_Filtres</button>
+        <button onclick="fetch_db()">Submit</button>
 <div id="MenuF" style="display: list-item;">
 
     <label for="meridian_select">Choose a meridian:</label>
