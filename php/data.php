@@ -29,16 +29,25 @@ $DATA_options_caracteristique = [
     ];
 $DATA_options_meridien = [
     "" => "",
-    "z" => "zang",
-    "j" => "jing_jin",
-    "l" => "voie_luo",
-    "m" => "meridien"
+    "tf" => "Zang / Fu",
+    "j" => "Jing jin",
+    "l" => "Voie luo",
+    "m" => "Méridien"
 ];
 $DATA_options_spot = [
     "" => "",
-    "p" => "poumon",
-    "c" => "coeur",
-    "j" => "jambe",
-    "b" => "bras"
+    "P" => "Poumon",
+    "GI" => "Gros Intestin",
+    "E" => "Estomac",
+    "Rte" => "Rate",
+    "C" => "Coeur",
+    "IG" => "Intestin Grêle",
+    "V" => "Vessie",
+    "R" => "Rein",
+    "MC" => "Maitre du Coeur",
+    "TR" => "Triple Réchauffeur",
+    "VB" => "Vésicule Biliaire",
+    "F" => "Foie"
+    // il manque qq spots à traiter plus tard si on a le temps
 ];
 ?>

@@ -33,20 +33,28 @@
 
     <select id="meridian_select">
         <option value="">--Please choose an option--</option>
-        <option value="meridien">Méridien</option>
-        <option value="voie_luo">Voie luo</option>
-        <option value="jing_jin">Jing jin</option>
-        <option value="zang">Zang</option>
+        <option value="Méridien">Méridien</option>
+        <option value="Voie luo">Voie luo</option>
+        <option value="Jing jin">Jing jin</option>
+        <option value="Zang / Fu">Zang / Fu</option>
     </select>
 
     <label for="spot_select">Choose a spot:</label>
 
     <select id="spot_select">
         <option value="">--Please choose an option--</option>
-        <option value="poumon">Poumon</option>
-        <option value="coeur">Coeur</option>
-        <option value="jambe">Jambe</option>
-        <option value="bras">Bras</option>
+        <option value="Poumon">Poumon</option>
+        <option value="Gros Intestin">Gros Intestin</option>
+        <option value="Estomac">Estomac</option>
+        <option value="Rate">Rate</option>
+        <option value="Coeur">Coeur</option>
+        <option value="Intestin Grêle">Intestin Grêle</option>
+        <option value="Vessie">Vessie</option>
+        <option value="Rein">Rein</option>
+        <option value="Maitre du Coeur">Maitre du Coeur</option>
+        <option value="Triple Réchauffeur">Triple Réchauffeur</option>
+        <option value="Vésicule Biliaire">Vésicule Biliaire</option>
+        <option value="Foie">Foie</option>
     </select>
     
     <label for="spot_select">Choose a caracteristique:</label>
