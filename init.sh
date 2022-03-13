@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 rm -rf smarty
 mkdir smarty
 cd smarty

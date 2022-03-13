@@ -3,6 +3,7 @@ window.onload = function init(){
 }
 
 function fetch_db(){
+    console.log("called");
     fetch('../php/fetch.php', {method: 'get',})
         .then(function(res) {
             return res.text();

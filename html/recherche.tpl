@@ -26,6 +26,7 @@
         <button onclick="test()">Filtres</button>
         <p id="resultat"></p>
         <button onclick="Toggle_Filtres()">Toggle_Filtres</button>
+        <button onclick="fetch_db()">Submit</button>
 <div id="MenuF" style="display: list-item;">
 {*
   <input type=checkbox name="M1" id="M1" >
