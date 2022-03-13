@@ -5,4 +5,7 @@ function test(){
     var spot = document.getElementById("spot_select");
     var spot_value = spot.value;
     console.log(spot_value);
+    var cara = document.getElementById("caracteristique_select");
+    var cara_value = cara.value;
+    console.log(cara_value);
 }

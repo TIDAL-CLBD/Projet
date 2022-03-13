@@ -27,16 +27,6 @@
         <p id="resultat"></p>
         <button onclick="Toggle_Filtres()">Toggle_Filtres</button>
 <div id="MenuF" style="display: list-item;">
-{*
-  <input type=checkbox name="M1" id="M1" >
-  <label for="M1">Méridien</label>
-  <input type=checkbox name="M2" id="M2" >
-  <label for="M2">Voie luo</label>
-  <input type=checkbox name="S1" id="S1" >
-  <label for="S1">Jing jin</label>
-  <input type=checkbox name="S2" id="S2" >
-  <label for="S2">Zang</label>
-*}
 
     <label for="meridian_select">Choose a meridian:</label>
 
@@ -71,17 +61,6 @@
     </select>
 </div>
 
-{*
-    <div class="subwrapper">
-        <!-- Temporaire: -->
-        <p class="M">Maladie 1 </p>
-        <p class="S">Symptome 1</p>
-        <p class="M">Maladie 2 </p>
-        <p class="S">Symptome 2</p>
-        <p class="M">Maladie 3 </p>
-        <p class="S">Symptome 3</p>
-    </div>
-*}
     <table id="table">
         <tr>
             <th>Pathologie</th>
