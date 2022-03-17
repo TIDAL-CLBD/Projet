@@ -44,7 +44,7 @@
     <select class="filter" id="spot_select">
         <option value="">--Please choose an option--</option>
         <option value="P">Poumon</option>
-        <option value="GI Intestin">Gros Intestin</option>
+        <option value="GI">Gros Intestin</option>
         <option value="E">Estomac</option>
         <option value="Rte">Rate</option>
         <option value="C">Coeur</option>

@@ -7,15 +7,12 @@ function fetch_db(onload=false){
     let values = getSelection();
     var valuesStr = JSON.stringify(values);
 
-    console.log(valuesStr);
     fetch('../php/fetch.php', {
             method: 'POST',
-            /*
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
             },
             body: valuesStr
-            */
         })
         .then(function(res) {
             return res.text();
