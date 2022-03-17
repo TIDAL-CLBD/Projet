@@ -13,8 +13,6 @@
 
 <body class="wrapper">
 
-
-    
     <h1 class="header" href="index.tpl"> Acupuncture </h1>
 
     <div class="searchbar">
@@ -29,20 +27,20 @@
         <button onclick="fetch_db()">Submit</button>
 <div id="MenuF" style="display: list-item;">
 
-    <label for="meridian_select">Choose a meridian:</label>
+    <label for="meridian_select">Localisation:</label>
 
     <select class="filter" id="meridian_select">
-        <option value="">--Please choose an option--</option>
+        <option value="">--Tous--</option>
         <option value="m">Méridien</option>
         <option value="l">Voie luo</option>
         <option value="j">Jing jin</option>
         <option value="tf">Zang / Fu</option>
     </select>
 
-    <label for="spot_select">Choose a spot:</label>
+    <label for="spot_select">Méridien:</label>
 
     <select class="filter" id="spot_select">
-        <option value="">--Please choose an option--</option>
+        <option value="">--Tous--</option>
         <option value="P">Poumon</option>
         <option value="GI">Gros Intestin</option>
         <option value="E">Estomac</option>
@@ -57,10 +55,10 @@
         <option value="F">Foie</option>
     </select>
     
-    <label for="spot_select">Choose a caracteristique:</label>
+    <label for="spot_select">Caractéristique:</label>
 
     <select class="filter" id="caracteristique_select">
-        <option value="">--Please choose an option--</option>
+        <option value="">--Tous--</option>
         <option value="e">Externe</option>
         <option value="i">Interne</option>
         <option value="p">Plein</option>
