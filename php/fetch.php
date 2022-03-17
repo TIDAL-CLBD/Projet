@@ -13,7 +13,7 @@ $dbh = new PDO($dsn,$user, $passwd);
 
 //Requête sql
 
-$sql = "SELECT * FROM patho WHERE mer LIKE %:data1% AND [type] LIKE %:data2% AND [type] LIKE %:data3%";
+$sql = 'SELECT * FROM patho WHERE mer LIKE %:data1% AND [type] LIKE %:data2% AND [type] LIKE %:data3%';
 
 $sth = $dbh->prepare($sql);
 var_dump($data);
