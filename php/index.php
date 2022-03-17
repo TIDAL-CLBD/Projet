@@ -1,8 +1,13 @@
 <?php
-echo("test php");
-require_once('../smarty/libs/Smarty.class.php');
-echo("test2");
-$smarty= new Smarty();
-echo("test3");
+require_once('init.php');
+$smarty = init();
+
 $smarty->assign('var1','test_var');
+$smarty->debugging = true;
+
+$smarty->setTemplateDir('../smarty/templates/');
+$smarty->setCompileDir('../smarty/templates_c/');
+$smarty->setConfigDir('../smarty/configs/');
+$smarty->setCacheDir('../smarty/cache/');
+
 $smarty->display('../html/index.tpl');
