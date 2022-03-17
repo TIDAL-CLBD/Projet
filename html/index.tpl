@@ -31,13 +31,10 @@
         
         <ul class="navigation">
             <li class="li_navigation"><a href="../php/recherche.php" title="Revenir à l'accueil">Recherche</a></li>
-            <li class="li_navigation"><a href="about.tpl" title="aller à la section A propos">A propos</a></li>
+            <li class="li_navigation"><a href="../php/about.php" title="aller à la section A propos">A propos</a></li>
         </ul>
         <h2>
             Quelques mots
-            <div>
-                test {$var1}
-            </div>
         </h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor bibendum orci ut sollicitudin. Cras sed risus sagittis, mollis est a, tristique arcu. Maecenas in tellus dignissim, tristique erat nec, mollis dui. Fusce nec tellus in dui efficitur venenatis in et est. Mauris molestie ultricies turpis et eleifend. Aliquam id mi lacus. Etiam justo nisi, ultricies vitae turpis ac, maximus dapibus mauris. Sed et ultrices urna, eget convallis magna. In dui neque, semper nec enim at, pulvinar convallis dolor.

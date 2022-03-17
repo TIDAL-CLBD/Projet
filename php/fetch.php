@@ -13,21 +13,17 @@ $dbh = new PDO($dsn,$user, $passwd);
 
 //Requête sql
 
-$sql = 'SELECT * FROM patho WHERE mer LIKE %:data1% AND [type] LIKE %:data2% AND [type] LIKE %:data3%';
+$sql = 'SELECT * FROM patho WHERE mer LIKE :data1 AND type LIKE :data2 AND type LIKE :data3';
 
 $sth = $dbh->prepare($sql);
-var_dump($data);
 
-$sth->bindValue(':data1', $data[1], PDO::PARAM_STR);
-$sth->bindValue(':data2', $data[2], PDO::PARAM_STR);
-$sth->bindValue(':data3', $data[3], PDO::PARAM_STR);
+$sth->bindValue(':data1', '%'.$data[1].'%', PDO::PARAM_STR);
+$sth->bindValue(':data2', '%'.$data[2].'%', PDO::PARAM_STR);
+$sth->bindValue(':data3', '%'.$data[3].'%', PDO::PARAM_STR);
+
 
 $success = $sth->execute();
-var_dump($success);
 $val = $sth->fetchAll();
-
-var_dump($val);
-var_dump($sth);
 
 echo(json_encode($val));
 
