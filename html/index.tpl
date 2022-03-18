@@ -10,8 +10,8 @@
 
    <header>
     	<h1>Accueil - Acunpunctoi</h1>
-        	<a href="login_visu.php">Se connecter</a>
-            <a href="signin_visu.php">Inscription</a>
+        	<a href="../php/login_visu.php">Se connecter</a>
+            <a href="../php/signin_visu.php">Inscription</a>
 	</header>
     <nav> <!--MENU-->
     	<ul>
