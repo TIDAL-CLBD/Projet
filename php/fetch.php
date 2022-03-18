@@ -23,6 +23,12 @@ if($data[0] == 0){
     $sth->bindValue(':data3', '%'.$data[3].'%', PDO::PARAM_STR);
 }else{
     //Recherche par mot-clef dans la description
+
+    //Vérification utilisateur connecté
+    if(!isset($_SESSION)){
+        echo(1);
+        return;
+    }
     $sql = 'SELECT patho.idp, patho.desc FROM patho WHERE patho.desc LIKE :data1';
 
     $sth = $dbh->prepare($sql);
@@ -39,7 +45,7 @@ if (!$success) {
 }
 $val = $sth->fetchAll();
 
-// Seconde requête, description symptomes 
+// Seconde requête, description/symptomes 
 
 $sql2 = 'SELECT symptpatho.idp, symptpatho.ids, symptome.desc 
  FROM symptpatho

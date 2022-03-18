@@ -24,6 +24,11 @@ function fetch_db(keywordSearch=false){
             body: valuesStr
         })
         .then(function(res) {
+            if(res == 1){
+                //1 : Valeur retournée si l'utilisateur demande une recherche par mot clef sans être connecté
+                window.alert("Erreur vous devez être connecté!");
+                return 1
+            }
             return res.text();
         })
         .then(function(text){
@@ -47,8 +52,8 @@ function getSelection(){
 }
 
 function gridcss(jobj){
+    // Mise en forme du résultat de la requête
     document.getElementById("table").innerHTML = "";
-    // Ajouter les titres dans le JS et pas dans le HTMl pour pouvoir clear à chaque fois
     console.log(jobj);
 
 
