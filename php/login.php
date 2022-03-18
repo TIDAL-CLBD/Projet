@@ -8,9 +8,6 @@ include('index.php');
 // On détruit la session pour détruire les infos des utilisateurs précedemment connectés
 session_destroy();
 
-	// Sous WAMP (Windows)
-
-	    //print_r($_POST);
 if (isset($_POST['submit_login'])){
 	$user = new User(NULL, NULL, $_POST['username'], $_POST['password'], NULL);
 	$user->login();
@@ -22,6 +19,6 @@ if(isset($_GET['erreur'])){
 	if($err==1 || $err==2){
 	    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
 		echo "<script>window.alert(\"Erreur, identifiants incorrects\");</script>";
-	    }
-	}
+    }
+}
 ?>

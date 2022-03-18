@@ -9,7 +9,7 @@ Timothée Levilly<br/>
 ## Accompli depuis le travail en séance
 Recherche par mot-clef et recherche par filtres<br/>
 Affichage des pathologies et des symptomes associés<br/>
-Connexion / Inscription<br/>
+Connexion / Inscription : Notre code est complet mais non fonctionnel à cause d'une erreur avec nos requêtes sql<br/>
 
 ## Instructions spécifiques
 Exécuter le script `init.sh` **avec les droits super utilisateur**<br/>

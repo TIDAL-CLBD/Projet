@@ -1,11 +1,12 @@
 header {
-    height: 13.5%;
+    height: 25%;
     background-color: #00818a;
-	margin-top:10%;
+	margin: top -1%;
 	position:fixed;
 	z-index:1;
 	width:100%;
 }
+
 
 h1 {
     margin-top: -1%;
@@ -17,21 +18,26 @@ h1 {
     text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
 }
 h2 {
+    padding-top: 15%;
+    text-align: center;
     width: 100%;
     font-size: 150%;
     color: rgba(200, 200, 200, .7);
     text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
 }
 p{
+    padding-top: 0%;
     width: 100%;
     text-align: center;
     font-size: 100%;
     color: rgba(133, 162, 184, 1);
     text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
     font-family:"Times New Roman"
+
 }
 body{
     background-color: rgb(04,32,55);
+    position:fixed;
 }
 /* Navigation Settings */
 nav {
@@ -39,22 +45,6 @@ nav {
 	bottom: 0;
 	width: 100%;
 	height: 70px;
-	background: #fff;
-}
-
-nav li {
-	display: inline-block;
-	padding: 24px 10px;
-}
-
-nav li a {
-	color: #757575;
-	text-transform: uppercase;
-}
-/*
-.navigation {
-    display: table;
-    width: 100%;
     margin: 0px auto;
     padding: 0;
     background: linear-gradient(#00818a, #00ffff);
@@ -63,84 +53,27 @@ nav li a {
     background: -o-linear-gradient(#00818a, #00ffff);
     background: linear-gradient(#00818a, #00ffff);
     border-radius: 3px;
+    
 }
 
-.navigation li {
-    display: table-cell;
+nav li {
+	display: table-cell;
+	padding: 24px 10px;
 }
 
-.navigation li a {
+nav li a {
     display: block;
-	width:100%;
+	text-transform: uppercase;
+    width:100%;
     text-align: center;
-    text-decoration: none;
-    padding: 8px 8px 17px 8px;
-	color: rgba(0, 0, 0, .7);
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .7);
-    transition: padding .3s;
-    transition: padding .3s, background .3s;
-    transition: all .3s .1s;
-    position: relative;
 }
-
-.navigation li:first-child a {
-    border-radius: 3px 0 0 3px;
-}
-
-.navigation li:last-child a {
-    border-radius: 0 3px 3px 0;
-}
-
-.navigation li a:hover,
-.navigation li a:focus {
-    background: rgba(255, 255, 255, .2);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 0 -1px 0 hsl(255, 100%, 100%) inset, 0 -2px 0 hsl(255, 100%, 100%) inset, 0 -3px 0 hsl(255, 100%, 100%) inset, 0 -4px 0 hsl(255, 100%, 100%) inset, 0 -5px 0 hsl(255, 100%, 100%) inset;
-    padding: 8px 25px 17px 25px;
-    transition: all .3s 0s;
-}
-
-.navigation li a:active {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .1));
-    box-shadow: 0 0 2px rgba(255, 255, 255, .3) inset;
-}
-
-.navigation li a::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 9px;
-    margin-left: -2px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, .5);
-}
-
-.navigation li a:hover::before,
-.navigation li a:focus::before {
-    background: white;
-    box-shadow: 0 0 2px white, 0 -1px 0 rgba(0, 0, 0, .4);
-}
-*/
-
 #Connexion {
     position: absolute;
     top: 1%;
     right: 1%;
 }
 
-#bouton {
-    position: absolute;
-    right: 1%;
-    top: 30%;
-}
 
-#bouton2{
-	position: absolute;
-	top: 60%;
-	right:1%;
-}
 
 #connectionState {
     position: absolute;
@@ -148,8 +81,4 @@ nav li a {
     right: 1%;
     text-decoration: underline overline rgba(0, 0, 0, 0.5);
     font-size: 150%;
-}
-
-form {
-    padding-bottom: 0%;
 }

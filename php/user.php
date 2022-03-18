@@ -25,7 +25,6 @@ class User {
 		return "Nom : ".$this->lastname.", Prénom : ".$this->firstname.", Utilisateur : ".$this->username.", MDP : ".$this->password.", Date de naissance : ".$this->birthday;
 	}
 
-
 	private function init_bd()
 	{
 		$user = 'pgtidal';
@@ -93,8 +92,7 @@ class User {
 			header('Location: index.php');
 		} else {
 			echo "<script>console.log('Réessayez');</script>";
-		}	
+		}
 	}
 }
-
 ?>
