@@ -28,12 +28,10 @@ class User {
 
 	private function init_bd()
 	{
-
 		$user = 'pgtidal';
 		$passwd = 'tidal';
 		$dsn = "pgsql:host=localhost;port=5432;dbname=acudb;";
-		
-		$acudb  = new PDO($dsn,$user, $passwd);
+		$acudb  = new PDO($dsn,$user, $passwd);	
 		return $acubd;
 	}
 
@@ -57,7 +55,7 @@ class User {
 			'birthday'=>$this->birthday));
 		$result = $req->fetch();
 		if($result){
-			header('Location: accueil.php');
+			header('Location: index.php');
 		}
 	}
 
@@ -72,9 +70,9 @@ class User {
 		if($result){
 			session_start();
 			$_SESSION["username"] = $this->username;
-			header('Location: accueil.php');
+			header('Location: index.php');
 		} else {
-			echo "<script>console.log('Try Again');</script>";
+			echo "<script>console.log('Réessayez');</script>";
 		}
 	}
 
@@ -90,10 +88,10 @@ class User {
 			'username'=>$this->username));
 		$result = $req->fetch();
 		if($result){
-			header('Location: accueil.php');
+			header('Location: index.php');
 		} else {
-			echo "<script>console.log('Try Again');</script>";
-		}
+			echo "<script>console.log('Réessayez');</script>";
+		}	
 	}
 
 }

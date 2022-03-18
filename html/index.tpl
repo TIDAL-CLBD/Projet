@@ -7,32 +7,24 @@
     <link rel="stylesheet" href="../css/index.css">
     <title>Accueil</title>
 </head>
-<body>
-    <header>
-        <form id="Connexion">
-            <label id="labelNdC">Nom d'utilisateur :</label>
-            <input id="NdC" type="text" name="NdC">
-            <label id="labelMdP">Mot de passe :</label>
-            <input id="MdP" type="password" name="MdP">
-        </form>
-        <button id="bouton" onclick="Connexion()">Se connecter</button>
-        <button id="bouton2">Inscription</button>
-        <p id="connectionState"></p>
-        <p id="sign_up"></p>
-        <br>
-        
 
-        <p id="bouton_connect"></p>
-        <p id="bouton_sign_up"></p>
-        <br>
+   <header>
+    	<h1>Accueil</h1>
+        	<a href="login_visu.php">Se connecter</a>
+            <a href="signin_visu.php">Inscription</a>
+	</header>
+    <nav> <!--MENU-->
+    	<ul>
+        	<li><a href="index.php">Accueil</a></li>
+        	<li><a href="about.php">A propos</a></li>
+        	<li><a href="recherche.php">Recherche des Symptômes</a></li>
+        	<li><a href="update_visu.php">Ma page</a></li>
+    	</ul>
+	</nav>
+    <body> 
     <h1>
         Acupunctoi
     </h1>
-        
-        <ul class="navigation">
-            <li class="li_navigation"><a href="../php/recherche.php" title="Revenir à l'accueil">Recherche</a></li>
-            <li class="li_navigation"><a href="../php/about.php" title="aller à la section A propos">A propos</a></li>
-        </ul>
         <h2>
             Quelques mots
         </h2>
@@ -53,5 +45,7 @@ Mauris egestas auctor eleifend. Ut in facilisis augue. Cras imperdiet, sapien a 
     </body>
 
 </html>
+
+
 
 

@@ -1,7 +1,7 @@
 <html>
 	<head>
 
-       <link rel="stylesheet" href="PageUser.css" media="screen" type="text/css" />
+       <link rel="stylesheet" href="PageUtilisateur.css" media="screen" type="text/css" />
         
     </head>
     <body>
@@ -23,7 +23,7 @@
                 <input type="password" placeholder="Entrer le mot de passe" name="password" required>
                 
                 <label><b>Date de Naissance</b></label>
-                <input type="number" placeholder="Entrer votre date de naissance" name="birthday" required>
+                <input type="date" placeholder="Entrer votre date de naissance" name="birthday" required>
 
                 <input type="submit" id='submit' name='submit_signin' value='Enregistrer' >
 
