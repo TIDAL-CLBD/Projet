@@ -1,7 +1,7 @@
 header {
     height: 13.5%;
     background-color: #00818a;
-	margin-top:0%;
+	margin-top:10%;
 	position:fixed;
 	z-index:1;
 	width:100%;
@@ -29,7 +29,6 @@ p{
     color: rgba(133, 162, 184, 1);
     text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
     font-family:"Times New Roman"
-
 }
 body{
     background-color: rgb(04,32,55);
