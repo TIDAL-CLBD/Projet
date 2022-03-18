@@ -31,7 +31,7 @@ class User {
 		$user = 'pgtidal';
 		$passwd = 'tidal';
 		$dsn = "pgsql:host=localhost;port=5432;dbname=acudb;";
-		$acudb = new PDO($dsn,$user, $passwd);	
+		$acudb = new PDO($dsn,$user, $passwd);
 		return $acudb;
 	}
 
@@ -45,8 +45,8 @@ class User {
 
 	public function insert()
 	{
-		$acubd = $this->init_bd();
-		$req = $acubd->prepare('INSERT INTO user(Nom, Prenom, idUT, Mdp, DateNaissance) VALUES(:lastname, :firstname, :username, :password, :birthday)');
+		$acudb = $this->init_bd();
+		$req = $acudb->prepare('INSERT INTO user(nom, prenom, idut, mdp, datenaissance) VALUES(:lastname, :firstname, :username, :password, :birthday)');
 		$req->execute(array(
 			'lastname' =>$this->lastname,
 			'firstname'=>$this->firstname,
@@ -62,8 +62,8 @@ class User {
 
 	public function login()
 	{
-		$acubd = $this->init_bd();
-		$req = $acubd->prepare('SELECT idUT,Mdp FROM user WHERE idUT=:username AND Mdp=:password');
+		$acudb = $this->init_bd();
+		$req = $acudb->prepare('SELECT idut,mdp FROM user WHERE idut=:username AND mdp=:password');
 		$req->execute(array(
 			'username'=>$this->username,
 			'password'=>$this->password));
@@ -80,8 +80,8 @@ class User {
 
 	public function update()
 	{
-		$acubd = $this->init_bd();
-		$req = $acubd->prepare('UPDATE user SET Nom=:lastname,Prenom=:firstname,Mdp=:password,DateNaissance=:birthday WHERE idUt=:username');
+		$acudb = $this->init_bd();
+		$req = $acudb->prepare('UPDATE user SET Nom=:lastname,Prenom=:firstname,mdp=:password,datenaissance=:birthday WHERE idut=:username');
 		$req->execute(array(
 			'lastname' =>$this->lastname,
 			'firstname'=>$this->firstname,

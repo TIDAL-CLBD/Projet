@@ -26,6 +26,7 @@ if($data[0] == 0){
 
     //Vérification utilisateur connecté
     if(!isset($_SESSION)){
+        //Désactivé car problèmes avec la connexion
         echo(1);
         return;
     }

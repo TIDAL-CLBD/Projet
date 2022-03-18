@@ -17,21 +17,21 @@
         <h1 > Acupunctoi </h1>
         <a href="../php/index.php">Accueil</a>
     </div>
-    <div class="searchbar" id="needLogin" hidden>
+    <div class="searchbar" id="needLogin">
         <textarea id="searchbar" placeholder="mot-clef" rows=1></textarea>
         <button onclick="fetch_db(true)">Rechercher par mot-clef</button>
     </div>
-    <div id="!needLogin">
+    <div id="!needLogin" hidden>
         <p>Vous devez être connecté pour faire une recherche par mot-clef</p>
     </div>
     <script>
         //On affiche la barre de recherche seulement aux utilisateurs connectés
         var loggedIn = {$loggedIn};
-        if(loggedIn == 0){
+        if(loggedIn == 1){
             let searchbar = document.getElementById("needLogin");
             let Nsearchbar = document.getElementById("!needLogin");
-            searchbar.removeAttribute("hidden");
-            Nsearchbar.setAttribute("hidden", 0);
+            Nsearchbar.removeAttribute("hidden");
+            searchbar.setAttribute("hidden", 0);
         }
     </script>
     <div class="filter">

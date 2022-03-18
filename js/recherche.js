@@ -54,7 +54,6 @@ function getSelection(){
 function gridcss(jobj){
     // Mise en forme du résultat de la requête
     document.getElementById("table").innerHTML = "";
-    console.log(jobj);
 
 
     let headRow = document.createElement("tr");
