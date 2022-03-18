@@ -13,3 +13,4 @@ Connexion / Inscription : Notre code est complet mais non fonctionnel à cause d
 
 ## Instructions spécifiques
 Exécuter le script `init.sh` **avec les droits super utilisateur**<br/>
+Page d'accueil: **ip:port/php/index.php**
