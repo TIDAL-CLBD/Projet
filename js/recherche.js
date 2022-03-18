@@ -40,7 +40,7 @@ function getSelection(){
 
     var selection = document.getElementsByClassName("filter");
     for (var i = 0; i < selection.length; i++) {
-        value = selection[i].value;
+        let value = selection[i].value;
         values.push(value);
     }
     return values
