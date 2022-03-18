@@ -21,7 +21,7 @@
         <p id="sign_up"></p>
         <br>
         
-     
+
         <p id="bouton_connect"></p>
         <p id="bouton_sign_up"></p>
         <br>

@@ -3,6 +3,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(1,1fr);
     grid-auto-rows: minmax(100px, auto);
+    background-color: #00818a;
+    color: rgba(253, 253, 253, 0.7);
+    text-shadow: 0 1px 0 rgba(134, 134, 134, 0.13);
 }
 .header{
     grid-column: 1;
@@ -11,6 +14,9 @@
 .searchbar{
     grid-column: 1;
     grid-row: 2;
+}
+textarea{
+    resize: none;
 }
 .filter{
     grid-column: 1;
