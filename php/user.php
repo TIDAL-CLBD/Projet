@@ -31,7 +31,7 @@ class User {
 		$user = 'pgtidal';
 		$passwd = 'tidal';
 		$dsn = "pgsql:host=localhost;port=5432;dbname=acudb;";
-		$acudb  = new PDO($dsn,$user, $passwd);	
+		$acudb = new PDO($dsn,$user, $passwd);	
 		return $acubd;
 	}
 
