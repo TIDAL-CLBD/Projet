@@ -32,7 +32,7 @@ class User {
 		$passwd = 'tidal';
 		$dsn = "pgsql:host=localhost;port=5432;dbname=acudb;";
 		$acudb = new PDO($dsn,$user, $passwd);	
-		return $acubd;
+		return $acudb;
 	}
 
 
@@ -55,6 +55,7 @@ class User {
 			'birthday'=>$this->birthday));
 		$result = $req->fetch();
 		if($result){
+			echo "<script>window.alert(\"Inscription réussie\");</script>";
 			header('Location: index.php');
 		}
 	}
@@ -70,6 +71,7 @@ class User {
 		if($result){
 			session_start();
 			$_SESSION["username"] = $this->username;
+			echo "<script>window.alert(\"Connexion réussie\");</script>";
 			header('Location: index.php');
 		} else {
 			echo "<script>console.log('Réessayez');</script>";
