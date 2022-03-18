@@ -28,7 +28,12 @@ class User {
 
 	private function init_bd()
 	{
-		$acubd = new PDO('mysql:host=localhost;dbname=acubd;charset=utf8', 'root', '');		
+
+		$user = 'pgtidal';
+		$passwd = 'tidal';
+		$dsn = "pgsql:host=localhost;port=5432;dbname=acudb;";
+		
+		$acudb  = new PDO($dsn,$user, $passwd);
 		return $acubd;
 	}
 
@@ -88,7 +93,7 @@ class User {
 			header('Location: accueil.php');
 		} else {
 			echo "<script>console.log('Try Again');</script>";
-		}	
+		}
 	}
 
 }

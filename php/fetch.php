@@ -10,23 +10,64 @@ $passwd = 'tidal';
 $dsn = "pgsql:host=localhost;port=5432;dbname=acudb;";
 
 $dbh = new PDO($dsn,$user, $passwd);
-
+$sth;
 //Requête sql
+if($data[0] == 0){
+    //Recherche par filtres
+    $sql = 'SELECT patho.idp, patho.desc FROM patho WHERE mer LIKE :data1 AND type LIKE :data2 AND type LIKE :data3';
 
-$sql = 'SELECT * FROM patho WHERE mer LIKE :data1 AND type LIKE :data2 AND type LIKE :data3';
+    $sth = $dbh->prepare($sql);
 
-$sth = $dbh->prepare($sql);
+    $sth->bindValue(':data1', '%'.$data[2].'%', PDO::PARAM_STR);
+    $sth->bindValue(':data2', '%'.$data[1].'%', PDO::PARAM_STR);
+    $sth->bindValue(':data3', '%'.$data[3].'%', PDO::PARAM_STR);
+}else{
+    //Recherche par mot-clef dans la description
+    $sql = 'SELECT patho.idp, patho.desc FROM patho WHERE patho.desc LIKE :data1';
 
-$sth->bindValue(':data1', '%'.$data[2].'%', PDO::PARAM_STR);
-$sth->bindValue(':data2', '%'.$data[1].'%', PDO::PARAM_STR);
-$sth->bindValue(':data3', '%'.$data[3].'%', PDO::PARAM_STR);
+    $sth = $dbh->prepare($sql);
+
+    $sth->bindValue(':data1', '%'.$data[1].'%', PDO::PARAM_STR);
+}
+
 
 $success = $sth->execute();
+
+if (!$success) {
+    echo "\nPDO::errorInfo():\n";
+    print_r($sth->errorInfo());
+}
 $val = $sth->fetchAll();
 
-echo(json_encode($val));
+// Seconde requête, description symptomes 
 
-//todo recup infos du js pour faire la requete
-//todo mise en page json
+$sql2 = 'SELECT symptpatho.idp, symptpatho.ids, symptome.desc 
+ FROM symptpatho
+ INNER JOIN symptome ON symptpatho.ids=symptome.ids';
 
-//dans le js: interpréter le json + adapter le css et le html en fct
+$sth = $dbh->prepare($sql2);
+$sth->execute();
+$val2 = $sth->fetchAll();
+
+usort($val2, function ($a, $b) {
+    return $a['idp'] - $b['idp'];
+}); //tri symptomes/patho par idp
+
+$symptidp = [0 => ""]; // on va associer chaque idp à tous ses symptomes
+$lastidp = 0;
+foreach($val2 as $key=>$value){
+    if($value["idp"] == $lastidp){
+        $symptidp[$lastidp][]=$value["desc"];
+    }else{
+        $lastidp = $value["idp"];
+        $symptidp[$lastidp]=[$value["desc"]];
+    }
+}
+$ret = $val;
+foreach ($val as $key=>$value) {
+    $idp = $value[0]; //id de la patho en question
+    $symptdesc = $symptidp[$idp]; //symptomes associés à cette patho
+    $ret[$key][]=$symptdesc;
+}
+
+echo(json_encode($ret));

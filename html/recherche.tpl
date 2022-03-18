@@ -13,19 +13,20 @@
 
 <body class="wrapper">
 
-    <h1 class="header" href="index.tpl"> Acupuncture </h1>
-
+    <h1 class="header"> Acupuncture </h1>
+    <h2 href="../php/index.php">Accueil</h2>
     <div class="searchbar">
-        <!-- Temporaire: -->
-        <textarea>Recherche</textarea>
+        <textarea id="searchbar" placeholder="mot-clef" rows=1></textarea>
+        <style>
+        textarea{
+            resize: none;
+        }
+        </style>
+        <button onclick="fetch_db(true)">Rechercher par mot-clef</button>
     </div>
     <div class="filter">
-        <!-- Temporaire: -->
-        <button onclick="test()">Filtres</button>
-        <p id="resultat"></p>
-        <button onclick="Toggle_Filtres()">Toggle_Filtres</button>
-        <button onclick="fetch_db()">Submit</button>
-<div id="MenuF" style="display: list-item;">
+        <button onclick="Toggle_Filtres()">Filtres</button>
+    <div id="MenuF" style="display: list-item;">
 
     <label for="meridian_select">Localisation:</label>
 
@@ -66,14 +67,15 @@
         <option value="c">Chaud</option>
         <option value="f">Froid</option>
     </select>
-</div>
-
-    <table id="table">
-        <tr>
-            <th>Pathologie</th>
-            <th>Symptome</th>
-        </tr>
-    </table> 
-    
+    <button onclick="fetch_db(false)">Rechercher par filtres</button>
+    </div>
+    <div>
+        <table id="table">
+            <tr>
+                <th>Pathologie</th>
+                <th>Symptome</th>
+            </tr>
+        </table> 
+    </div>
 </body>
 </html>

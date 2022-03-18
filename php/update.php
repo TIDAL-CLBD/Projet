@@ -4,7 +4,12 @@ include('user.php');
 include('updatesign.tpl');
 
 session_start();
-// $acubd = new PDO('mysql:host=localhost;dbname=acubd;charset=utf8', 'root', '');
+
+$user = 'pgtidal';
+$passwd = 'tidal';
+$dsn = "pgsql:host=localhost;port=5432;dbname=acudb;";
+
+$acudb  = new PDO($dsn,$user, $passwd);
 
 if(isset($_POST['submit_update'])){
 	$user = new User($_POST['lastname'], $_POST['firstname'], $_SESSION["username"], $_POST['password'], $_POST['birthday']);
