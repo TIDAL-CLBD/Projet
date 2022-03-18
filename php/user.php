@@ -93,7 +93,6 @@ class User {
 			echo "<script>console.log('Réessayez');</script>";
 		}	
 	}
-
 }
 
 ?>

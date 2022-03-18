@@ -12,4 +12,4 @@ Affichage des pathologies et des symptomes associés<br/>
 Connexion / Inscription<br/>
 
 ## Instructions spécifiques
-Exécuter le script `init.sh`<br/>
+Exécuter le script `init.sh` **avec les droits super utilisateur**<br/>
